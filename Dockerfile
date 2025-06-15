@@ -66,3 +66,6 @@ COPY requirements.txt ./
 RUN python3.12 -m venv /root/venv \
     && /root/venv/bin/pip install --upgrade pip \
     && /root/venv/bin/pip install --no-cache-dir -r requirements.txt
+
+# Gitの設定を行う
+RUN git config --global core.editor 'code --wait'
